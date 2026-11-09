@@ -8,10 +8,10 @@ import { Component, input, output, ChangeDetectionStrategy } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailRecipe {
-  receta= input.required<any>()
-  closerecipe=output<number>()
+  receta = input.required<any>()
+  closerecipe = output<number>()
 
-  close(){
+  close() {
     this.closerecipe.emit(0)
   }
 }

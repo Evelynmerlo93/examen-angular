@@ -6,13 +6,13 @@ import { Recipe } from '../../interface/recipe';
   imports: [],
   templateUrl: './card-recipe.html',
   styleUrl: './card-recipe.css',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardRecipe {
   recipecard = input.required<Recipe>()
   clickCard = output<number>()
 
-  onClic(){
+  onClic() {
     this.clickCard.emit(this.recipecard().id);
   }
 }

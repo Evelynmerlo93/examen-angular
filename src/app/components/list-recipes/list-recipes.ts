@@ -10,14 +10,14 @@ import { DetailRecipe } from '../detail-recipe/detail-recipe';
   styleUrl: './list-recipes.css',
 })
 export class ListRecipes {
-  recipeService= inject(RecipeService);
-  recipeList= signal(this.recipeService.getAll());
-  recipeselect=signal(0)
+  recipeService = inject(RecipeService);
+  recipeList = signal(this.recipeService.getAll());
+  recipeselect = signal(0)
 
-  onSelect(id:number){
+  onSelect(id: number) {
     this.recipeselect.set(id)
   }
-  searchRecipe(){
+  searchRecipe() {
     return this.recipeService.getById(this.recipeselect())
   }
 }
