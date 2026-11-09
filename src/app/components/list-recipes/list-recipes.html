@@ -1,6 +1,13 @@
 <section>
     @for(receta of recipeList(); track receta.id){
-        <app-card-recipe [recipecard]="receta"> 
+        <app-card-recipe [recipecard]="receta"(clickCard)="onSelect($event)"> 
         </app-card-recipe>
     }
 </section>
+@if(searchRecipe(); as onereceta){
+<app-detail-recipe 
+    [receta]="onereceta"
+    (closerecipe)="onSelect($event)">
+</app-detail-recipe>
+
+}
