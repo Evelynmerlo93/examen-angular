@@ -1,1 +1,6 @@
-<p>list-recipes works!</p>
+<section>
+    @for(receta of recipeList(); track receta.id){
+        <app-card-recipe [recipecard]="receta"> 
+        </app-card-recipe>
+    }
+</section>

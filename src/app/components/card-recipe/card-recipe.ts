@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { Recipe } from '../../recipe';
+import { RecipeService } from '../../recipe-service';
 
 @Component({
   selector: 'app-card-recipe',
@@ -8,10 +8,11 @@ import { Recipe } from '../../recipe';
   styleUrl: './card-recipe.css',
 })
 export class CardRecipe {
-  recipeCard = input<Recipe>()
+  recipecard = input.required<any>()
   clickCard = output<number>()
+
   
   onClic(){
-    this.clickCard.emit(1)
+    this.clickCard.emit(this.recipecard().id);
   }
 }
