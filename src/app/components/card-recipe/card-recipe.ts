@@ -1,5 +1,6 @@
 import { Component, input, output } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
+import { Recipe } from '../../interface/recipe';
 @Component({
   selector: 'app-card-recipe',
   imports: [],
@@ -8,7 +9,7 @@ import { ChangeDetectionStrategy } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardRecipe {
-  recipecard = input.required<any>()
+  recipecard = input.required<Recipe>()
   clickCard = output<number>()
 
   onClic(){

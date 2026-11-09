@@ -1,11 +1,11 @@
-import { Injectable,  } from '@angular/core';
+import { Injectable, } from '@angular/core';
 import { Recipe } from './interface/recipe';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RecipeService {
-  recipes=[
+  recipes = [
     {
       id: 1,
       name: 'Spaghetti Carbonara',
@@ -108,13 +108,13 @@ export class RecipeService {
     }
   ];
 
-  getAll(){
-  return this.recipes;
+  getAll() {
+    return this.recipes;
   }
 
-  getById(id:number){
-  return this.recipes.find(r => r.id === id);
+  getById(id: number) {
+    return this.recipes.find(r => r.id === id);
   }
 }
-  
+
 
