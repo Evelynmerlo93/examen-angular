@@ -1,8 +1,10 @@
 <article class="detail-card">
-<img [src]="receta().image"[alt]="receta().description">
+<img [src]="receta().image" [alt]="receta().description">
 <h5>{{receta().name}}</h5>
 <p>{{receta().description}}</p>
 <p>{{receta().category}}</p>
-<p>{{receta().category}}</p>
+<p>{{receta().preparationTime}}</p>
+<p>{{receta().difficulty}}</p>
+<p>{{receta().servings}}</p>
 <button (click)="close()">Volver atrás</button>
 </article>
